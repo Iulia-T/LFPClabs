@@ -68,14 +68,13 @@ public class lab2 {
         for (int i = 0; i < rule.length(); i++) {
             if (rule.charAt(i) >= 'a' && rule.charAt(i) <= 'z' && rule.charAt(i + 1) == ' ') {
                 for (int j = 0; j < terminals; j++)
-                    if (rule.charAt(i) == listOfTerminals[j]) currentState = j; //determinates the path
+                    if (rule.charAt(i) == listOfTerminals[j]) {currentState = j; break;}//determinates the path
 
                 //if such key doesn't exist, it creates a new one
                 if (!nfaTable.containsKey(key)) {
                     value[currentState] = assignedNonterminal;
                     nfaTable.put(key, value);
                 }
-
                  else {
                     for (int k = 0; k < terminals; k++)
                        if (k!=currentState) value[k] = nfaTable.get(key)[k];
@@ -93,14 +92,16 @@ public class lab2 {
                             }
                         if (b) currentValue += assignedNonterminal;
                         //value[currentState] = sortingString(value[currentState]);
-                        value[currentState] = currentValue;
-                        nfaTable.put(key, value);
                     }
+                    value[currentState] = currentValue;
+                    nfaTable.put(key, value);
+
                  }
+                String x = Arrays.toString(value);
+                System.out.println(key + " "+ x);
             }
         }
-        String x = Arrays.toString(value);
-        System.out.println(key + " "+ x);
+
     }
 
 
