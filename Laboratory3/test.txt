@@ -1,0 +1,12 @@
+fun sum(x, y){
+  var result = x + y;
+  return result;
+
+}
+
+fun main(){
+    var a = 5;
+    var b = 10;
+    var c = sum(x, y);
+    var message = "Cool, you summed 2 numbers"
+}
