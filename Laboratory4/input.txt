@@ -1,0 +1,12 @@
+Vn = S, A, B, C, E
+S->bAC
+S->B
+A->a
+A->aS
+A->bCaCb
+B->AC
+B->bS
+B->aAa
+C->eps
+C->AB
+E->BA
