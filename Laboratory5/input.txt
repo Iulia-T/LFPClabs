@@ -1,0 +1,9 @@
+Vn = S, A, B, C
+Vt = a, b, c, d, e, f
+S->Bc
+S->AcdC
+C->Ce
+C->f
+A->Bbf
+B->a
+B->Bba
